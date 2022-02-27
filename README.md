@@ -1,0 +1,2 @@
+# aspNetCore-BasitIslemler
+ temel işlemler
