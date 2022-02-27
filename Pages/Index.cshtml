@@ -1,0 +1,47 @@
+﻿@page  "{parametre1?}/{parametre2?}"
+@model IndexModel
+@{
+    //ViewData["Title"] = "Home page";
+    //buradaki veri koddakini bastırdı
+    //açıklama satırı yaptık
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Bootstrap teması <a href="https://bootswatch.com">bootswatch.com</a>.</p>
+</div>
+
+<div class="row">
+    <div class="col-6 bg-warning  text-dark p-2 m-2 border rounded">
+        <form method="post" class="p-2">
+            <div class="p-2">
+                Girilen (gogle veya piriv girilebilir)
+                <input type="text" id="girilen" name="girilen" value="@Model.girilen" style="width: 100%" class="bg-primary" />
+            </div>
+            <div class="p-2">
+                <input type="submit" name="name" value="Gönder" class="btn-primary" />
+            </div>
+            <div class="text-center p-2">
+                <a href="/abc/123">Örnek Link</a> &nbsp;
+                <button onclick="window.open('/deneme/javascript', '_self');return false;
+                    //javascript ile sayfa yönlendirme
+                    //return false ile submit olması engellenir
+                    //_self veya _parent ile hedef sekme belirlenir
+                    "
+                    class="btn-danger">
+                    Örnek Düğme</button>
+            </div>
+            <div class="p-2 mt-2 border-dark border-top">
+                Sonuç 
+                <p style="white-space: pre-line">@Model.sonuc</p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#girilen").focus();
+        //HTML'de autofocus zaten var aslında
+    });
+</script>
